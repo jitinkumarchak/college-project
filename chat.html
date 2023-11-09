@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatbox</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="cvl2.png" class="logo">
+            <nav>
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+            </nav>
+            <img src="menu.png"onclick="openNav()">
+            <img menu-icon&onclick="closeNav()";>
+            <!-- MENU</img class="menu-icon" -->  
+        </div>
+    </section>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">MY PROFILE</a>
+        <a href="#">STUDENT</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT US</a>
+      </div>
+      
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+
+    <div id="chatbox">
+        <ul id="message-list">
+            </ul>
+
+        <input type="text" id="message-input" placeholder="Enter your message">
+    </div>
+
+    <script>
+        // Simulate real-time message sending and receiving
+        const messageList = document.getElementById('message-list');
+        const messageInput = document.getElementById('message-input');
+
+        function simulateMessage(username, content) {
+            const messageElement = document.createElement('li');
+            messageElement.classList.add('message');
+
+            const usernameElement = document.createElement('span');
+            usernameElement.classList.add('message-username');
+            usernameElement.textContent = `${username}: `;
+
+            const contentElement = document.createElement('span');
+            contentElement.classList.add('message-content');
+            contentElement.textContent = content;
+
+            messageElement.appendChild(usernameElement);
+            messageElement.appendChild(contentElement);
+
+            messageList.appendChild(messageElement);
+        }
+
+        // Handle message sending
+        messageInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter') {
+                const messageContent = messageInput.value;
+                messageInput.value = '';
+
+                simulateMessage('You', messageContent);
+
+                // Send the message to the server (in a real application)
+            }
+        });
+    </script>
+    </div>
+    <footer class="footer">
+        <div class="container2">
+          <div class="row">
+            <div class="col-md-4">
+              <h4 class="footer-title">About Us</h4>
+              <p>We are passionate about education and helping students reach their full potential. We provide a variety of resources and support to help students succeed in their studies.</p>
+              <a href="#" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col-md-4">
+              <h4 class="footer-title">Features</h4>
+              <ul class="footer-list">
+                <li><a href="#">Study Tips</li>
+                <li><a href="#">Time Management</li>
+                <li><a href="#">Test Preparation</li>
+                <li><a href="#">College Planning</li>
+                <li><a href="#">Financial Aid</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h4 class="footer-title">Contact Us</h4>
+              <ul class="footer-list">
+                <li><a href="#">Email: campusverse.com</li>
+                <li><a href="#">Phone: +91 889977XXXX</li>
+                <li><a href="#">Address: new delhi ,india</li>
+              </ul>
+              <ul class="social-media-list">
+                <li><a href="https://www.google.com/"><i class="fa fa-google"></i></a></li>
+                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          &copy; 2023 campusverse@india .All Rights Reserved.
+        </div>
+    
+</body>
+</html>

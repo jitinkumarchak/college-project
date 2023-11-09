@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>campusverse</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="cvlogo.png" class="logo">
+            <nav>
+            <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            </ul>
+            </nav>
+            <img src="menu.png"onclick="openNav()">
+            <img menu-icon&onclick="closeNav()";>
+            <!-- MENU</img class="menu-icon" -->
+            
+
+        </div>
+    </section>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">MY PROFILE</a>
+        <a href="#">STUDENT</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">CONTACT US</a>
+      </div>
+      
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
+
+        <div class="row">
+            <div class="col">
+                <h1>campusverse</h1>
+                <p>BUILD AND GROW WITH CAMPUSVERSE</p>
+                <button type="button">EXPLORE</button>
+            </div>
+            <div class="col">
+                <div class="card card1">
+                    <h5><a href="http://127.0.0.1:5500/home%20page/chat.html">community</a></h5>
+                    <p>Lorem ipsum, dolor sit amet  at esse labore commodi impedit rerum.</p>
+                </div>
+                <div class="card card2">
+                    <h5>events</h5>
+                    <p>Lorem ipsum, dolor sit amet  at esse labore commodi impedit rerum.</p>
+                </div>
+                <div class="card card3">
+                    <h5>news</h5>
+                    <p>Lorem ipsum, dolor sit amet  at esse labore commodi impedit rerum.</p>
+                </div>
+                <div class="card card4">
+                    <h5>forum</h5>
+                    <p>Lorem ipsum, dolor sit amet  at esse labore commodi impedit rerum.</p>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    
+</body>
+</html>
