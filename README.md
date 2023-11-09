@@ -1,2 +1,2 @@
-# college-project
+# campusverse
 college project to provide more interactive environment.
